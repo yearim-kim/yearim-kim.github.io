@@ -123,7 +123,7 @@
       box-shadow: 0 1px 8px rgba(0,0,0,0.12);
       border: 1px solid #ececec;
     }
-    .pub-thumb img {
+    .pub-thumb img, .pub-thumb canvas {
       width: 100%; height: 100%; object-fit: contain; background: #fff;
       padding: 4px;
     }
@@ -430,26 +430,51 @@
     tryNext(0);
   })();
 
-  // Publication thumbnails: if images/pubs/<name>.png exists, show it; otherwise keep the colored tile.
-  // (.jpg with the same name also works)
-  document.querySelectorAll(".pub-thumb[data-img]").forEach(function (tile) {
-    var base = tile.getAttribute("data-img");
-    var exts = [".png", ".jpg", ".jpeg", ".webp", ".PNG", ".JPG"];
-    var stems = [base.replace(/\.png$/, ""), base.replace(/^images\/pubs\//, "images/").replace(/\.png$/, "")];
-    var candidates = [];
-    stems.forEach(function (s) { exts.forEach(function (e) { candidates.push(s + e); }); });
-    (function tryNext(i) {
-      if (i >= candidates.length) return;
+  // Publication thumbnails: PNG/JPG are shown directly; PDFs are rendered with PDF.js.
+  (function () {
+    var tiles = Array.prototype.slice.call(document.querySelectorAll(".pub-thumb[data-img]"));
+    var pdfTiles = [];
+
+    tiles.forEach(function (tile) {
+      var src = tile.getAttribute("data-img");
+      if (/\.pdf$/i.test(src)) { pdfTiles.push([tile, src]); return; }
       var img = new Image();
       img.onload = function () {
         tile.textContent = "";
         tile.style.background = "#fff";
         tile.appendChild(img);
       };
-      img.onerror = function () { tryNext(i + 1); };
-      img.src = candidates[i];
-    })(0);
-  });
+      img.src = src; // on error, the colored tile stays
+    });
+
+    if (!pdfTiles.length) return;
+    var s = document.createElement("script");
+    s.src = "https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js";
+    s.onload = function () {
+      pdfjsLib.GlobalWorkerOptions.workerSrc =
+        "https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js";
+      pdfTiles.forEach(function (pair) {
+        var tile = pair[0], url = pair[1];
+        pdfjsLib.getDocument(url).promise.then(function (pdf) {
+          return pdf.getPage(1);
+        }).then(function (page) {
+          var base = page.getViewport({ scale: 1 });
+          var vp = page.getViewport({ scale: 500 / base.width }); // ~500px wide, stays sharp
+          var canvas = document.createElement("canvas");
+          canvas.width = vp.width; canvas.height = vp.height;
+          return page.render({ canvasContext: canvas.getContext("2d"), viewport: vp })
+            .promise.then(function () {
+              tile.textContent = "";
+              tile.style.background = "#fff";
+              canvas.style.width = "100%"; canvas.style.height = "100%";
+              canvas.style.objectFit = "contain";
+              tile.appendChild(canvas);
+            });
+        }).catch(function () { /* keep colored tile */ });
+      });
+    };
+    document.head.appendChild(s);
+  })();
 </script>
 </body>
 </html>
