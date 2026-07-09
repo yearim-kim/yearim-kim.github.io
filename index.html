@@ -3,9 +3,40 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Yearim Kim</title>
-  <meta name="description" content="Yearim Kim — Ph.D. student at Seoul National University working on Computer Vision and eXplainable AI.">
+  <title>Yearim Kim (김예림) — Ph.D. Student, Seoul National University</title>
+  <meta name="description" content="Yearim Kim (김예림) — integrated M.S./Ph.D. student in Artificial Intelligence at Seoul National University (MIPAL, advisor Nojun Kwak). Research on eXplainable AI, interpretability, and computer vision. Publications at ICLR, TPAMI, WACV, AAAI, CHI.">
   <meta name="author" content="Yearim Kim">
+  <meta name="keywords" content="Yearim Kim, 김예림, explainable AI, XAI, interpretability, computer vision, Seoul National University, MIPAL, Nojun Kwak">
+  <meta name="google-site-verification" content="Za3OAgpeS560EsSGlG67ngPBcqeqjlr3YEIgj_gNg5U">
+  <link rel="canonical" href="https://yearim-kim.github.io/">
+  <meta property="og:title" content="Yearim Kim — Ph.D. Student, Seoul National University">
+  <meta property="og:description" content="Research on eXplainable AI and computer vision at SNU MIPAL.">
+  <meta property="og:url" content="https://yearim-kim.github.io/">
+  <meta property="og:type" content="profile">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Yearim Kim",
+    "alternateName": "김예림",
+    "url": "https://yearim-kim.github.io/",
+    "email": "yerim1656@snu.ac.kr",
+    "jobTitle": "Ph.D. Student in Artificial Intelligence",
+    "affiliation": {
+      "@type": "CollegeOrUniversity",
+      "name": "Seoul National University"
+    },
+    "alumniOf": {
+      "@type": "CollegeOrUniversity",
+      "name": "Korea University"
+    },
+    "sameAs": [
+      "https://scholar.google.com/citations?user=nS8vgAQAAAAJ",
+      "https://github.com/yerrrringo98"
+    ],
+    "knowsAbout": ["Explainable AI", "Interpretability", "Computer Vision", "Machine Learning"]
+  }
+  </script>
   <style>
     :root {
       --text: #1f1f1f;
@@ -14,59 +45,62 @@
       --accent: #1772d0;
       --accent-hover: #f09228;
       --rule: #e4e4e4;
-      --highlight: #fff7e0;
+      --highlight: #fffbee;
     }
-    <meta name="google-site-verification" content="Za3OAgpeS560EsSGlG67ngPBcqeqjlr3YEIgj_gNg5U" />
     * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
     body {
       margin: 0;
       font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
       font-size: 15.5px;
-      line-height: 1.6;
+      line-height: 1.65;
       color: var(--text);
       background: #ffffff;
     }
     a { color: var(--accent); text-decoration: none; }
     a:hover { color: var(--accent-hover); }
-    .container { max-width: 820px; margin: 0 auto; padding: 48px 24px 72px; }
+    .container { max-width: 900px; margin: 0 auto; padding: 52px 26px 72px; }
 
     /* Header */
-    .header { display: flex; align-items: center; gap: 36px; flex-wrap: wrap; }
-    .header-text { flex: 1 1 420px; }
-    .header h1 { font-size: 34px; font-weight: 400; margin: 0 0 12px; }
-    .header p { margin: 0 0 12px; color: var(--text); }
-    .links { margin-top: 6px; font-size: 15px; }
-    .links span.sep { color: #bbb; margin: 0 6px; }
+    .header { display: flex; align-items: center; gap: 40px; flex-wrap: wrap; }
+    .header-text { flex: 1 1 460px; }
+    .header h1 { font-size: 36px; font-weight: 400; margin: 0 0 14px; letter-spacing: 0.5px; }
+    .header p { margin: 0 0 12px; }
+    .links { margin-top: 10px; font-size: 15px; }
+    .links span.sep { color: #ccc; margin: 0 7px; }
     #portrait-slot { flex-shrink: 0; }
     .portrait {
-      width: 180px; height: 180px; border-radius: 50%;
+      width: 200px; height: 200px; border-radius: 50%;
       object-fit: cover; display: block;
+      box-shadow: 0 2px 14px rgba(0,0,0,0.12);
     }
     .portrait-fallback {
-      width: 180px; height: 180px; border-radius: 50%;
+      width: 200px; height: 200px; border-radius: 50%;
       display: flex; align-items: center; justify-content: center;
       background: linear-gradient(135deg, #dbe7f5, #eef3fa);
-      color: #7a93b5; font-size: 48px; font-weight: 300; letter-spacing: 2px;
+      color: #7a93b5; font-size: 52px; font-weight: 300; letter-spacing: 2px;
     }
+
+    /* Research statement */
+    .research-box {
+      margin-top: 40px; padding: 20px 24px;
+      background: #f7f9fc; border-radius: 10px;
+      border-left: 4px solid var(--accent);
+    }
+    .research-box h2 { margin: 0 0 8px; border: none; padding: 0; font-size: 20px; }
+    .research-box p { margin: 0; color: var(--muted); }
 
     /* Sections */
     h2 {
-      font-size: 22px; font-weight: 400; margin: 48px 0 10px;
-      padding-bottom: 6px; border-bottom: 1px solid var(--rule);
+      font-size: 23px; font-weight: 400; margin: 52px 0 12px;
+      padding-bottom: 7px; border-bottom: 1px solid var(--rule);
     }
     .section-note { color: var(--light); font-size: 13.5px; margin: 0 0 6px; }
 
     /* Research-area group headers */
-    .area {
-      display: flex; align-items: center; gap: 10px;
-      margin: 30px 0 6px;
-    }
+    .area { display: flex; align-items: center; gap: 10px; margin: 34px 0 8px; }
     .area .bar { width: 5px; height: 22px; border-radius: 3px; background: var(--accent); }
-    .area h3 {
-      font-size: 17.5px; font-weight: 700; margin: 0;
-      letter-spacing: 0.3px;
-    }
-    .area .count { color: var(--light); font-size: 13.5px; font-weight: 400; }
+    .area h3 { font-size: 18px; font-weight: 700; margin: 0; letter-spacing: 0.3px; }
 
     /* News */
     .news-table { border-collapse: collapse; width: 100%; }
@@ -74,21 +108,34 @@
     .news-date { width: 92px; color: var(--light); font-size: 14px; white-space: nowrap; }
 
     /* Publications */
-    .pub { display: flex; gap: 20px; padding: 12px 10px; border-radius: 8px; }
-    .pub.highlight { background: var(--highlight); }
-    .pub-thumb {
-      width: 130px; height: 82px; flex-shrink: 0; border-radius: 6px;
-      display: flex; align-items: center; justify-content: center;
-      font-size: 12px; font-weight: 700; letter-spacing: 1px; color: #fff;
-      text-align: center; padding: 4px;
+    .pub {
+      display: flex; gap: 22px; padding: 16px 12px; border-radius: 10px;
+      transition: background 0.15s ease;
     }
-    .pub-body { flex: 1; }
-    .pub-title { font-weight: 700; }
-    .pub-authors { font-size: 14.5px; color: var(--muted); margin: 2px 0; }
+    .pub:hover { background: #f6f8fb; }
+    .pub.highlight { background: var(--highlight); }
+    .pub.highlight:hover { background: #fff5d6; }
+    .pub-thumb {
+      width: 190px; height: 120px; flex-shrink: 0; border-radius: 8px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 13px; font-weight: 700; letter-spacing: 1px; color: #fff;
+      text-align: center; padding: 4px; overflow: hidden;
+      box-shadow: 0 1px 6px rgba(0,0,0,0.10);
+    }
+    .pub-thumb img {
+      width: 100%; height: 100%; object-fit: contain; background: #fff;
+    }
+    .pub-body { flex: 1; min-width: 0; }
+    .pub-title { font-weight: 700; font-size: 16px; }
+    .pub-title a { color: var(--text); }
+    .pub-title a:hover { color: var(--accent); }
+    .pub-authors { font-size: 14.5px; color: var(--muted); margin: 3px 0 1px; }
     .pub-authors .me { font-weight: 700; color: var(--text); }
     .pub-venue { font-size: 14.5px; font-style: italic; color: var(--muted); }
     .pub-venue .venue-strong { font-style: normal; font-weight: 700; color: var(--text); }
-    .pub-links { font-size: 14px; margin-top: 2px; }
+    .pub-links { font-size: 14px; margin: 3px 0 4px; }
+    .pub-links span.sep { color: #ccc; margin: 0 5px; }
+    .pub-desc { font-size: 14px; color: var(--light); margin-top: 2px; }
 
     /* Experience & teaching */
     .item { margin-bottom: 14px; }
@@ -101,10 +148,10 @@
       color: var(--light); font-size: 13px;
     }
 
-    @media (max-width: 640px) {
-      .header { flex-direction: column-reverse; align-items: flex-start; gap: 20px; }
-      .pub { flex-direction: column; gap: 8px; }
-      .pub-thumb { width: 100%; height: 64px; }
+    @media (max-width: 680px) {
+      .header { flex-direction: column-reverse; align-items: flex-start; gap: 22px; }
+      .pub { flex-direction: column; gap: 10px; }
+      .pub-thumb { width: 100%; height: 110px; }
     }
   </style>
 </head>
@@ -118,13 +165,9 @@
       <p>
         I am an integrated M.S./Ph.D. student in Artificial Intelligence at
         <a href="https://www.snu.ac.kr/" target="_blank" rel="noopener">Seoul National University</a>,
-        where I am a member of <a href="http://mipal.snu.ac.kr" target="_blank" rel="noopener">MIPAL</a>
-        advised by Prof. <a href="http://mipal.snu.ac.kr" target="_blank" rel="noopener">Nojun Kwak</a>.
-      </p>
-      <p>
-        My research focuses on <b>eXplainable AI (XAI)</b> and <b>computer vision</b> —
-        understanding what vision models learn and how they make decisions, from attribution
-        methods to mechanistic and concept-level interpretability.
+        where I am a member of the Machine Intelligence and Pattern Analysis Lab
+        (<a href="http://mipal.snu.ac.kr" target="_blank" rel="noopener">MIPAL</a>)
+        advised by Prof. <a href="https://scholar.google.com/citations?user=h_8-1M0AAAAJ" target="_blank" rel="noopener">Nojun Kwak</a>.
       </p>
       <p>
         Before SNU, I received my B.S. in Statistics from
@@ -140,6 +183,18 @@
     <!-- Photo: put your picture in the images/ folder named profile.jpg
          (profile.jpeg / profile.png / profile.webp also work) -->
     <div id="portrait-slot"><div class="portrait-fallback">YK</div></div>
+  </div>
+
+  <!-- ===================== Research statement ===================== -->
+  <div class="research-box">
+    <h2>Research</h2>
+    <p>
+      I work on <b>eXplainable AI (XAI)</b> for vision models. My goal is to understand what
+      vision models learn and how they make decisions — spanning fine-grained attribution methods,
+      concept-level and mechanistic interpretability, and unified frameworks that connect local,
+      global, and mechanistic views of a model. I believe that opening up the inner workings of
+      models is a prerequisite for safe, transparent, and trustworthy AI.
+    </p>
   </div>
 
   <!-- ===================== News ===================== -->
@@ -162,74 +217,83 @@
     <h3>eXplainable AI &amp; Interpretability</h3>
   </div>
 
-  <!-- SRD / ICLR 2024 -->
-  <div class="pub highlight">
-    <div class="pub-thumb" style="background:linear-gradient(135deg,#1e5aa8,#5e8fd0)">SRD</div>
-    <div class="pub-body">
-      <span class="pub-title">Respect the Model: Fine-grained and Robust Explanation with Sharing Ratio Decomposition</span>
-      <div class="pub-authors">Sangyu Han*, <span class="me">Yearim Kim*</span>, Nojun Kwak</div>
-      <div class="pub-venue"><span class="venue-strong">ICLR 2024</span></div>
-    </div>
-  </div>
-
-  <!-- GIG / arXiv -->
-  <div class="pub">
-    <div class="pub-thumb" style="background:linear-gradient(135deg,#7a6a2f,#b0a05e)">GIG</div>
-    <div class="pub-body">
-      <span class="pub-title">Decompose the Model: Mechanistic Interpretability in Image Models with Generalized Integrated Gradients (GIG)</span>
-      <div class="pub-authors"><span class="me">Yearim Kim*</span>, Sangyu Han*, Nojun Kwak</div>
-      <div class="pub-venue">arXiv preprint</div>
-      <div class="pub-links"><a href="https://arxiv.org/abs/2409.01610" target="_blank" rel="noopener">arXiv</a></div>
-    </div>
-  </div>
-
   <!-- iERF / TPAMI 2026 -->
   <div class="pub highlight">
-    <div class="pub-thumb" style="background:linear-gradient(135deg,#b3541e,#e08a4e)">iERF</div>
+    <div class="pub-thumb" data-img="images/pubs/ierf.png" style="background:linear-gradient(135deg,#b3541e,#e08a4e)">iERF</div>
     <div class="pub-body">
       <span class="pub-title">From Local to Global to Mechanistic: An iERF-Centered Unified Framework for Interpreting Vision Models</span>
-      <div class="pub-authors"><span class="me">Yearim Kim*</span>, Sangyu Han*, Nojun Kwak</div>
+      <div class="pub-authors"><span class="me">Yearim Kim*</span>, <a href="https://scholar.google.com/citations?user=Xe9KzXgAAAAJ" target="_blank" rel="noopener">Sangyu Han*</a>, <a href="https://scholar.google.com/citations?user=h_8-1M0AAAAJ" target="_blank" rel="noopener">Nojun Kwak</a></div>
       <div class="pub-venue"><span class="venue-strong">IEEE TPAMI</span>, 2026 (to appear)</div>
+      <div class="pub-desc">A unified framework centered on implicit effective receptive fields (iERF) that connects local attribution, global concept analysis, and mechanistic circuit-level interpretation of vision models.</div>
     </div>
   </div>
-
-  <!-- Bi-ICE / WACV 2026 -->
-  <div class="pub">
-    <div class="pub-thumb" style="background:linear-gradient(135deg,#3b7a57,#6fae8b)">Bi-ICE</div>
-    <div class="pub-body">
-      <span class="pub-title">Bi-ICE: An Inner Interpretable Framework for Image Classification via Bi-directional Interactions between Concept and Input Embeddings</span>
-      <div class="pub-authors">Jinyung Hong*, <span class="me">Yearim Kim*</span>, Keun Hee Park, Sangyu Han, Nojun Kwak, Theodore P. Pavlic</div>
-      <div class="pub-venue"><span class="venue-strong">WACV 2026</span></div>
-    </div>
-  </div>
-
+  
   <!-- HIVE / under review -->
   <div class="pub">
-    <div class="pub-thumb" style="background:linear-gradient(135deg,#6d5ba7,#9b8cc4)">HIVE</div>
+    <div class="pub-thumb" data-img="images/pubs/hive.png" style="background:linear-gradient(135deg,#6d5ba7,#9b8cc4)">HIVE</div>
     <div class="pub-body">
       <span class="pub-title">HIVE: Hierarchical Induction of Visual Embeddings for Part–Whole Representation Learning</span>
-      <div class="pub-authors">Jinyung Hong*, <span class="me">Yearim Kim*</span>, Keun Hee Park, Pavan K. Turaga, Nojun Kwak, Andrew I Yang</div>
+      <div class="pub-authors"><a href="https://scholar.google.com/citations?user=JaQMvXsAAAAJ" target="_blank" rel="noopener">Jinyung Hong*</a>, <span class="me">Yearim Kim*</span>, <a href="https://scholar.google.com/citations?user=-QseKLUAAAAJ" target="_blank" rel="noopener">Keun Hee Park</a>, Pavan K. Turaga, <a href="https://scholar.google.com/citations?user=h_8-1M0AAAAJ" target="_blank" rel="noopener">Nojun Kwak</a>, Andrew I Yang</div>
       <div class="pub-venue">Under review</div>
-    </div>
-  </div>
-
-  <!-- SAE causal / ICCV 2025 WS -->
-  <div class="pub">
-    <div class="pub-thumb" style="background:linear-gradient(135deg,#5d5d81,#9393b8)">SAE</div>
-    <div class="pub-body">
-      <span class="pub-title">Causal Interpretation of Sparse Autoencoder Features in Vision</span>
-      <div class="pub-authors">Sangyu Han, <span class="me">Yearim Kim</span>, Nojun Kwak</div>
-      <div class="pub-venue">eXCV Workshop @ <span class="venue-strong">ICCV 2025</span></div>
+      <div class="pub-desc">Hierarchical induction of visual embeddings for learning part–whole structure in visual representations.</div>
     </div>
   </div>
 
   <!-- ERF-SAE / under review -->
   <div class="pub">
-    <div class="pub-thumb" style="background:linear-gradient(135deg,#2e7d6b,#5fae9d)">ERF-SAE</div>
+    <div class="pub-thumb" data-img="images/pubs/erfsae.png" style="background:linear-gradient(135deg,#2e7d6b,#5fae9d)">ERF-SAE</div>
     <div class="pub-body">
       <span class="pub-title">Beyond Activation Patches: ERF-Grounded Autolabeling of Sparse Autoencoder Features in Vision Transformers</span>
-      <div class="pub-authors">Sangyu Han*, <span class="me">Yearim Kim*</span>, Nojun Kwak</div>
+      <div class="pub-authors"><a href="https://scholar.google.com/citations?user=Xe9KzXgAAAAJ" target="_blank" rel="noopener">Sangyu Han*</a>, <span class="me">Yearim Kim*</span>, <a href="https://scholar.google.com/citations?user=h_8-1M0AAAAJ" target="_blank" rel="noopener">Nojun Kwak</a></div>
       <div class="pub-venue">Under review</div>
+      <div class="pub-desc">Automatically labeling SAE features in vision transformers by grounding them in effective receptive fields rather than activation patches.</div>
+    </div>
+  </div>
+
+  <!-- Bi-ICE / WACV 2026 -->
+  <div class="pub">
+    <div class="pub-thumb" data-img="images/pubs/biice.png" style="background:linear-gradient(135deg,#3b7a57,#6fae8b)">Bi-ICE</div>
+    <div class="pub-body">
+      <span class="pub-title"><a href="https://arxiv.org/abs/2411.18645" target="_blank" rel="noopener">Bi-ICE: An Inner Interpretable Framework for Image Classification via Bi-directional Interactions between Concept and Input Embeddings</a></span>
+      <div class="pub-authors"><a href="https://scholar.google.com/citations?user=JaQMvXsAAAAJ" target="_blank" rel="noopener">Jinyung Hong*</a>, <span class="me">Yearim Kim*</span>, <a href="https://scholar.google.com/citations?user=-QseKLUAAAAJ" target="_blank" rel="noopener">Keun Hee Park</a>, <a href="https://scholar.google.com/citations?user=Xe9KzXgAAAAJ" target="_blank" rel="noopener">Sangyu Han</a>, <a href="https://scholar.google.com/citations?user=h_8-1M0AAAAJ" target="_blank" rel="noopener">Nojun Kwak</a>, <a href="https://scholar.google.com/citations?user=UAmGg-cAAAAJ" target="_blank" rel="noopener">Theodore P. Pavlic</a></div>
+      <div class="pub-venue"><span class="venue-strong">WACV 2026</span></div>
+      <div class="pub-links"><a href="https://arxiv.org/abs/2411.18645" target="_blank" rel="noopener">arXiv</a></div>
+      <div class="pub-desc">An inner-interpretable module that makes predictions through human-interpretable concepts, quantifying each concept's contribution and localizing it in the input.</div>
+    </div>
+  </div>
+
+  <!-- SAE causal / ICCV 2025 WS -->
+  <div class="pub">
+    <div class="pub-thumb" data-img="images/pubs/sae.png" style="background:linear-gradient(135deg,#5d5d81,#9393b8)">SAE</div>
+    <div class="pub-body">
+      <span class="pub-title">Causal Interpretation of Sparse Autoencoder Features in Vision</span>
+      <div class="pub-authors"><a href="https://scholar.google.com/citations?user=Xe9KzXgAAAAJ" target="_blank" rel="noopener">Sangyu Han</a>, <span class="me">Yearim Kim</span>, <a href="https://scholar.google.com/citations?user=h_8-1M0AAAAJ" target="_blank" rel="noopener">Nojun Kwak</a></div>
+      <div class="pub-venue">eXCV Workshop @ <span class="venue-strong">ICCV 2025</span></div>
+      <div class="pub-desc">Moving beyond correlation: analyzing what sparse autoencoder features in vision models causally contribute to predictions.</div>
+    </div>
+  </div>
+
+  <!-- GIG / arXiv -->
+  <div class="pub">
+    <div class="pub-thumb" data-img="images/pubs/gig.png" style="background:linear-gradient(135deg,#7a6a2f,#b0a05e)">GIG</div>
+    <div class="pub-body">
+      <span class="pub-title"><a href="https://arxiv.org/abs/2409.01610" target="_blank" rel="noopener">Decompose the Model: Mechanistic Interpretability in Image Models with Generalized Integrated Gradients (GIG)</a></span>
+      <div class="pub-authors"><span class="me">Yearim Kim*</span>, <a href="https://scholar.google.com/citations?user=Xe9KzXgAAAAJ" target="_blank" rel="noopener">Sangyu Han*</a>, <a href="https://scholar.google.com/citations?user=h_8-1M0AAAAJ" target="_blank" rel="noopener">Nojun Kwak</a></div>
+      <div class="pub-venue">arXiv preprint</div>
+      <div class="pub-links"><a href="https://arxiv.org/abs/2409.01610" target="_blank" rel="noopener">arXiv</a><span class="sep">/</span><a href="https://gig2025iclr.netlify.app/" target="_blank" rel="noopener">project page</a></div>
+      <div class="pub-desc">GIG traces how concepts develop across the hidden layers of image models by attributing between monosemantic concept vectors, revealing the full circuit from input to prediction.</div>
+    </div>
+  </div>
+
+  <!-- SRD / ICLR 2024 -->
+  <div class="pub highlight">
+    <div class="pub-thumb" data-img="images/pubs/srd.png" style="background:linear-gradient(135deg,#1e5aa8,#5e8fd0)">SRD</div>
+    <div class="pub-body">
+      <span class="pub-title"><a href="https://arxiv.org/abs/2402.03348" target="_blank" rel="noopener">Respect the Model: Fine-grained and Robust Explanation with Sharing Ratio Decomposition</a></span>
+      <div class="pub-authors"><a href="https://scholar.google.com/citations?user=Xe9KzXgAAAAJ" target="_blank" rel="noopener">Sangyu Han*</a>, <span class="me">Yearim Kim*</span>, <a href="https://scholar.google.com/citations?user=h_8-1M0AAAAJ" target="_blank" rel="noopener">Nojun Kwak</a></div>
+      <div class="pub-venue"><span class="venue-strong">ICLR 2024</span></div>
+      <div class="pub-links"><a href="https://arxiv.org/abs/2402.03348" target="_blank" rel="noopener">arXiv</a></div>
+      <div class="pub-desc">SRD faithfully reflects the model's inference process by decomposing nonlinear interactions between filters from a vector perspective, yielding fine-grained, high-resolution, and noise-robust explanations.</div>
     </div>
   </div>
 
@@ -239,23 +303,25 @@
     <h3>Human–AI Collaboration &amp; AI for Education</h3>
   </div>
 
-  <!-- PedaCo-Gen / CHI EA 2026 -->
+  <!-- Dual gatekeeping / CHI 2026 WS -->
   <div class="pub">
-    <div class="pub-thumb" style="background:linear-gradient(135deg,#a34a4a,#cf8080)">PedaCo-Gen</div>
+    <div class="pub-thumb" data-img="images/pubs/gatekeeping.png" style="background:linear-gradient(135deg,#8c3760,#c46d97)">CHI WS</div>
     <div class="pub-body">
-      <span class="pub-title">PedaCo-Gen: Scaffolding Pedagogical Agency in Human-AI Collaborative Video Authoring</span>
-      <div class="pub-authors">Injun Baek*, <span class="me">Yearim Kim*</span>, Nojun Kwak</div>
-      <div class="pub-venue"><span class="venue-strong">CHI EA 2026</span> (poster)</div>
+      <span class="pub-title">When Saying No Makes Better Videos: Designing Dual Gatekeeping for Pedagogically Grounded AI Content Creation</span>
+      <div class="pub-authors"><span class="me">Yearim Kim*</span>, Injun Baek*, <a href="https://scholar.google.com/citations?user=h_8-1M0AAAAJ" target="_blank" rel="noopener">Nojun Kwak</a></div>
+      <div class="pub-venue">Workshop @ <span class="venue-strong">CHI 2026</span></div>
+      <div class="pub-desc">Exploring how AI that selectively refuses requests can produce more pedagogically grounded educational content.</div>
     </div>
   </div>
 
-  <!-- Dual gatekeeping / CHI 2026 WS -->
+  <!-- PedaCo-Gen / CHI EA 2026 -->
   <div class="pub">
-    <div class="pub-thumb" style="background:linear-gradient(135deg,#8c3760,#c46d97)">CHI WS</div>
+    <div class="pub-thumb" data-img="images/pubs/pedacogen.png" style="background:linear-gradient(135deg,#a34a4a,#cf8080)">PedaCo-Gen</div>
     <div class="pub-body">
-      <span class="pub-title">When Saying No Makes Better Videos: Designing Dual Gatekeeping for Pedagogically Grounded AI Content Creation</span>
-      <div class="pub-authors"><span class="me">Yearim Kim*</span>, Injun Baek*, Nojun Kwak</div>
-      <div class="pub-venue">Workshop @ <span class="venue-strong">CHI 2026</span></div>
+      <span class="pub-title">PedaCo-Gen: Scaffolding Pedagogical Agency in Human-AI Collaborative Video Authoring</span>
+      <div class="pub-authors">Injun Baek*, <span class="me">Yearim Kim*</span>, <a href="https://scholar.google.com/citations?user=h_8-1M0AAAAJ" target="_blank" rel="noopener">Nojun Kwak</a></div>
+      <div class="pub-venue"><span class="venue-strong">CHI EA 2026</span> (poster)</div>
+      <div class="pub-desc">A system that scaffolds educators' pedagogical agency when co-authoring educational videos with generative AI.</div>
     </div>
   </div>
 
@@ -267,31 +333,35 @@
 
   <!-- VDPP / CVPR 2026 WS -->
   <div class="pub">
-    <div class="pub-thumb" style="background:linear-gradient(135deg,#37648c,#6d9cc4)">VDPP</div>
+    <div class="pub-thumb" data-img="images/pubs/vdpp.png" style="background:linear-gradient(135deg,#37648c,#6d9cc4)">VDPP</div>
     <div class="pub-body">
       <span class="pub-title">VDPP: Video Depth Post-Processing for Speed and Scalability</span>
-      <div class="pub-authors">Daewon Yoon, Injun Baek, Sangyu Han, <span class="me">Yearim Kim</span>, Nojun Kwak</div>
+      <div class="pub-authors">Daewon Yoon, Injun Baek, <a href="https://scholar.google.com/citations?user=Xe9KzXgAAAAJ" target="_blank" rel="noopener">Sangyu Han</a>, <span class="me">Yearim Kim</span>, <a href="https://scholar.google.com/citations?user=h_8-1M0AAAAJ" target="_blank" rel="noopener">Nojun Kwak</a></div>
       <div class="pub-venue">ECV Workshop @ <span class="venue-strong">CVPR 2026</span></div>
+      <div class="pub-desc">A post-processing approach that makes video depth estimation faster and more scalable.</div>
     </div>
   </div>
 
   <!-- TensoRF relighting / WACV 2024 -->
   <div class="pub">
-    <div class="pub-thumb" style="background:linear-gradient(135deg,#c47d2a,#e0ac67)">TensoRF</div>
+    <div class="pub-thumb" data-img="images/pubs/relighting.png" style="background:linear-gradient(135deg,#c47d2a,#e0ac67)">TensoRF</div>
     <div class="pub-body">
-      <span class="pub-title">Fast Sun-aligned Outdoor Scene Relighting based on TensoRF</span>
-      <div class="pub-authors">Yeonjin Chang, <span class="me">Yearim Kim</span>, Nojun Kwak</div>
+      <span class="pub-title"><a href="https://arxiv.org/abs/2311.03965" target="_blank" rel="noopener">Fast Sun-aligned Outdoor Scene Relighting based on TensoRF</a></span>
+      <div class="pub-authors">Yeonjin Chang, <span class="me">Yearim Kim</span>, <a href="https://scholar.google.com/citations?user=h_8-1M0AAAAJ" target="_blank" rel="noopener">Nojun Kwak</a></div>
       <div class="pub-venue"><span class="venue-strong">WACV 2024</span></div>
+      <div class="pub-links"><a href="https://arxiv.org/abs/2311.03965" target="_blank" rel="noopener">arXiv</a></div>
+      <div class="pub-desc">Fast outdoor scene relighting that aligns lighting with sun direction using a TensoRF-based representation.</div>
     </div>
   </div>
 
   <!-- MD3D / IEEE Access 2022 -->
   <div class="pub">
-    <div class="pub-thumb" style="background:linear-gradient(135deg,#4a6b8a,#7e9cb8)">MD3D</div>
+    <div class="pub-thumb" data-img="images/pubs/md3d.png" style="background:linear-gradient(135deg,#4a6b8a,#7e9cb8)">MD3D</div>
     <div class="pub-body">
       <span class="pub-title">MD3D: Mixture-Density-based 3D Object Detection in Point Clouds</span>
       <div class="pub-authors">Jaeseok Choi, Yeji Song, <span class="me">Yearim Kim</span></div>
       <div class="pub-venue"><span class="venue-strong">IEEE Access</span>, 2022</div>
+      <div class="pub-desc">3D object detection in point clouds using mixture density modeling.</div>
     </div>
   </div>
 
@@ -303,11 +373,13 @@
 
   <!-- Any-Way / AAAI 2024 -->
   <div class="pub">
-    <div class="pub-thumb" style="background:linear-gradient(135deg,#8a4f9e,#b98aca)">Meta</div>
+    <div class="pub-thumb" data-img="images/pubs/anyway.png" style="background:linear-gradient(135deg,#8a4f9e,#b98aca)">Meta</div>
     <div class="pub-body">
-      <span class="pub-title">Any-Way Meta Learning</span>
-      <div class="pub-authors">Junhoo Lee, <span class="me">Yearim Kim</span>, Nojun Kwak</div>
+      <span class="pub-title"><a href="https://arxiv.org/abs/2401.05097" target="_blank" rel="noopener">Any-Way Meta Learning</a></span>
+      <div class="pub-authors">Junhoo Lee, <span class="me">Yearim Kim</span>, <a href="https://scholar.google.com/citations?user=h_8-1M0AAAAJ" target="_blank" rel="noopener">Nojun Kwak</a></div>
       <div class="pub-venue"><span class="venue-strong">AAAI 2024</span></div>
+      <div class="pub-links"><a href="https://arxiv.org/abs/2401.05097" target="_blank" rel="noopener">arXiv</a></div>
+      <div class="pub-desc">Meta-learning that is not fixed to a specific N-way configuration at test time.</div>
     </div>
   </div>
 
@@ -346,7 +418,7 @@
 </div>
 
 <script>
-  // Try several common photo filenames; keep the "YK" placeholder if none exists.
+  // Profile photo: try several common filenames; keep the "YK" placeholder if none exists.
   (function () {
     var candidates = [
       "images/profile.jpg", "images/profile.jpeg", "images/profile.png",
@@ -354,7 +426,7 @@
     ];
     var slot = document.getElementById("portrait-slot");
     function tryNext(i) {
-      if (i >= candidates.length) return; // keep placeholder
+      if (i >= candidates.length) return;
       var img = new Image();
       img.onload = function () {
         img.className = "portrait";
@@ -367,6 +439,24 @@
     }
     tryNext(0);
   })();
+
+  // Publication thumbnails: if images/pubs/<name>.png exists, show it; otherwise keep the colored tile.
+  // (.jpg with the same name also works)
+  document.querySelectorAll(".pub-thumb[data-img]").forEach(function (tile) {
+    var base = tile.getAttribute("data-img");
+    var candidates = [base, base.replace(/\.png$/, ".jpg"), base.replace(/\.png$/, ".jpeg"), base.replace(/\.png$/, ".webp")];
+    (function tryNext(i) {
+      if (i >= candidates.length) return;
+      var img = new Image();
+      img.onload = function () {
+        tile.textContent = "";
+        tile.style.background = "#fff";
+        tile.appendChild(img);
+      };
+      img.onerror = function () { tryNext(i + 1); };
+      img.src = candidates[i];
+    })(0);
+  });
 </script>
 </body>
 </html>
