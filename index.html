@@ -32,7 +32,7 @@
     },
     "sameAs": [
       "https://scholar.google.com/citations?user=nS8vgAQAAAAJ",
-      "https://github.com/yerrrringo98"
+      "https://github.com/yearim-kim"
     ],
     "knowsAbout": ["Explainable AI", "Interpretability", "Computer Vision", "Machine Learning"]
   }
@@ -116,14 +116,16 @@
     .pub.highlight { background: var(--highlight); }
     .pub.highlight:hover { background: #fff5d6; }
     .pub-thumb {
-      width: 190px; height: 120px; flex-shrink: 0; border-radius: 8px;
+      width: 250px; height: 158px; flex-shrink: 0; border-radius: 8px;
       display: flex; align-items: center; justify-content: center;
       font-size: 13px; font-weight: 700; letter-spacing: 1px; color: #fff;
       text-align: center; padding: 4px; overflow: hidden;
-      box-shadow: 0 1px 6px rgba(0,0,0,0.10);
+      box-shadow: 0 1px 8px rgba(0,0,0,0.12);
+      border: 1px solid #ececec;
     }
     .pub-thumb img {
       width: 100%; height: 100%; object-fit: contain; background: #fff;
+      padding: 4px;
     }
     .pub-body { flex: 1; min-width: 0; }
     .pub-title { font-weight: 700; font-size: 16px; }
@@ -151,7 +153,7 @@
     @media (max-width: 680px) {
       .header { flex-direction: column-reverse; align-items: flex-start; gap: 22px; }
       .pub { flex-direction: column; gap: 10px; }
-      .pub-thumb { width: 100%; height: 110px; }
+      .pub-thumb { width: 100%; height: 160px; }
     }
   </style>
 </head>
@@ -177,7 +179,7 @@
         <a href="mailto:yerim1656@snu.ac.kr">Email</a><span class="sep">/</span>
         <a href="cv_yearim.pdf">CV</a><span class="sep">/</span>
         <a href="https://scholar.google.com/citations?user=nS8vgAQAAAAJ&hl=en" target="_blank" rel="noopener">Google Scholar</a><span class="sep">/</span>
-        <a href="https://github.com/yerrrringo98" target="_blank" rel="noopener">GitHub</a>
+        <a href="https://github.com/yearim-kim" target="_blank" rel="noopener">GitHub</a>
       </div>
     </div>
     <!-- Photo: put your picture in the images/ folder named profile.jpg
@@ -217,17 +219,6 @@
     <h3>eXplainable AI &amp; Interpretability</h3>
   </div>
 
-  <!-- iERF / TPAMI 2026 -->
-  <div class="pub highlight">
-    <div class="pub-thumb" data-img="images/mechanistic.png" style="background:linear-gradient(135deg,#b3541e,#e08a4e)">iERF</div>
-    <div class="pub-body">
-      <span class="pub-title">From Local to Global to Mechanistic: An iERF-Centered Unified Framework for Interpreting Vision Models</span>
-      <div class="pub-authors"><span class="me">Yearim Kim*</span>, <a href="https://scholar.google.com/citations?user=Xe9KzXgAAAAJ" target="_blank" rel="noopener">Sangyu Han*</a>, <a href="https://scholar.google.com/citations?user=h_8-1M0AAAAJ" target="_blank" rel="noopener">Nojun Kwak</a></div>
-      <div class="pub-venue"><span class="venue-strong">IEEE TPAMI</span>, 2026 (to appear)</div>
-      <div class="pub-desc">A unified framework centered on implicit effective receptive fields (iERF) that connects local attribution, global concept analysis, and mechanistic circuit-level interpretation of vision models.</div>
-    </div>
-  </div>
-  
   <!-- HIVE / under review -->
   <div class="pub">
     <div class="pub-thumb" data-img="images/hive.pdf" style="background:linear-gradient(135deg,#6d5ba7,#9b8cc4)">HIVE</div>
@@ -247,6 +238,17 @@
       <div class="pub-authors"><a href="https://scholar.google.com/citations?user=Xe9KzXgAAAAJ" target="_blank" rel="noopener">Sangyu Han*</a>, <span class="me">Yearim Kim*</span>, <a href="https://scholar.google.com/citations?user=h_8-1M0AAAAJ" target="_blank" rel="noopener">Nojun Kwak</a></div>
       <div class="pub-venue">Under review</div>
       <div class="pub-desc">Automatically labeling SAE features in vision transformers by grounding them in effective receptive fields rather than activation patches.</div>
+    </div>
+  </div>
+
+  <!-- iERF / TPAMI 2026 -->
+  <div class="pub highlight">
+    <div class="pub-thumb" data-img="images/mechanistic.png" style="background:linear-gradient(135deg,#b3541e,#e08a4e)">iERF</div>
+    <div class="pub-body">
+      <span class="pub-title">From Local to Global to Mechanistic: An iERF-Centered Unified Framework for Interpreting Vision Models</span>
+      <div class="pub-authors"><span class="me">Yearim Kim*</span>, <a href="https://scholar.google.com/citations?user=Xe9KzXgAAAAJ" target="_blank" rel="noopener">Sangyu Han*</a>, <a href="https://scholar.google.com/citations?user=h_8-1M0AAAAJ" target="_blank" rel="noopener">Nojun Kwak</a></div>
+      <div class="pub-venue"><span class="venue-strong">IEEE TPAMI</span>, 2026 (to appear)</div>
+      <div class="pub-desc">A unified framework centered on implicit effective receptive fields (iERF) that connects local attribution, global concept analysis, and mechanistic circuit-level interpretation of vision models.</div>
     </div>
   </div>
 
@@ -321,7 +323,7 @@
 
   <!-- VDPP / CVPR 2026 WS -->
   <div class="pub">
-    <div class="pub-thumb" data-img="images/pubs/vdpp.png" style="background:linear-gradient(135deg,#37648c,#6d9cc4)">VDPP</div>
+    <div class="pub-thumb" data-img="images/vdpp.pdf" style="background:linear-gradient(135deg,#37648c,#6d9cc4)">VDPP</div>
     <div class="pub-body">
       <span class="pub-title">VDPP: Video Depth Post-Processing for Speed and Scalability</span>
       <div class="pub-authors">Daewon Yoon, Injun Baek, <a href="https://scholar.google.com/citations?user=Xe9KzXgAAAAJ" target="_blank" rel="noopener">Sangyu Han</a>, <span class="me">Yearim Kim</span>, <a href="https://scholar.google.com/citations?user=h_8-1M0AAAAJ" target="_blank" rel="noopener">Nojun Kwak</a></div>
@@ -332,7 +334,7 @@
 
   <!-- TensoRF relighting / WACV 2024 -->
   <div class="pub">
-    <div class="pub-thumb" data-img="images/pubs/relighting.png" style="background:linear-gradient(135deg,#c47d2a,#e0ac67)">TensoRF</div>
+    <div class="pub-thumb" data-img="images/relighting.png" style="background:linear-gradient(135deg,#c47d2a,#e0ac67)">TensoRF</div>
     <div class="pub-body">
       <span class="pub-title"><a href="https://arxiv.org/abs/2311.03965" target="_blank" rel="noopener">Fast Sun-aligned Outdoor Scene Relighting based on TensoRF</a></span>
       <div class="pub-authors">Yeonjin Chang, <span class="me">Yearim Kim</span>, <a href="https://scholar.google.com/citations?user=h_8-1M0AAAAJ" target="_blank" rel="noopener">Nojun Kwak</a></div>
@@ -344,7 +346,7 @@
 
   <!-- MD3D / IEEE Access 2022 -->
   <div class="pub">
-    <div class="pub-thumb" data-img="images/pubs/md3d.png" style="background:linear-gradient(135deg,#4a6b8a,#7e9cb8)">MD3D</div>
+    <div class="pub-thumb" data-img="images/md3d.png" style="background:linear-gradient(135deg,#4a6b8a,#7e9cb8)">MD3D</div>
     <div class="pub-body">
       <span class="pub-title">MD3D: Mixture-Density-based 3D Object Detection in Point Clouds</span>
       <div class="pub-authors">Jaeseok Choi, Yeji Song, <span class="me">Yearim Kim</span></div>
@@ -361,7 +363,7 @@
 
   <!-- Any-Way / AAAI 2024 -->
   <div class="pub">
-    <div class="pub-thumb" data-img="images/pubs/anyway.png" style="background:linear-gradient(135deg,#8a4f9e,#b98aca)">Meta</div>
+    <div class="pub-thumb" data-img="images/anyway.pdf" style="background:linear-gradient(135deg,#8a4f9e,#b98aca)">Meta</div>
     <div class="pub-body">
       <span class="pub-title"><a href="https://arxiv.org/abs/2401.05097" target="_blank" rel="noopener">Any-Way Meta Learning</a></span>
       <div class="pub-authors">Junhoo Lee, <span class="me">Yearim Kim</span>, <a href="https://scholar.google.com/citations?user=h_8-1M0AAAAJ" target="_blank" rel="noopener">Nojun Kwak</a></div>
@@ -432,7 +434,10 @@
   // (.jpg with the same name also works)
   document.querySelectorAll(".pub-thumb[data-img]").forEach(function (tile) {
     var base = tile.getAttribute("data-img");
-    var candidates = [base, base.replace(/\.png$/, ".jpg"), base.replace(/\.png$/, ".jpeg"), base.replace(/\.png$/, ".webp")];
+    var exts = [".png", ".jpg", ".jpeg", ".webp", ".PNG", ".JPG"];
+    var stems = [base.replace(/\.png$/, ""), base.replace(/^images\/pubs\//, "images/").replace(/\.png$/, "")];
+    var candidates = [];
+    stems.forEach(function (s) { exts.forEach(function (e) { candidates.push(s + e); }); });
     (function tryNext(i) {
       if (i >= candidates.length) return;
       var img = new Image();
