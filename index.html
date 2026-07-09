@@ -35,16 +35,15 @@
     .header h1 { font-size: 34px; font-weight: 400; margin: 0 0 12px; }
     .header p { margin: 0 0 12px; color: var(--text); }
     .links { margin-top: 6px; font-size: 15px; }
-    .links a { margin-right: 4px; }
     .links span.sep { color: #bbb; margin: 0 6px; }
+    #portrait-slot { flex-shrink: 0; }
     .portrait {
       width: 180px; height: 180px; border-radius: 50%;
-      object-fit: cover; flex-shrink: 0;
-      background: linear-gradient(135deg, #dbe7f5, #eef3fa);
+      object-fit: cover; display: block;
     }
     .portrait-fallback {
       width: 180px; height: 180px; border-radius: 50%;
-      flex-shrink: 0; display: flex; align-items: center; justify-content: center;
+      display: flex; align-items: center; justify-content: center;
       background: linear-gradient(135deg, #dbe7f5, #eef3fa);
       color: #7a93b5; font-size: 48px; font-weight: 300; letter-spacing: 2px;
     }
@@ -54,7 +53,19 @@
       font-size: 22px; font-weight: 400; margin: 48px 0 10px;
       padding-bottom: 6px; border-bottom: 1px solid var(--rule);
     }
-    .section-note { color: var(--light); font-size: 13.5px; margin: 0 0 18px; }
+    .section-note { color: var(--light); font-size: 13.5px; margin: 0 0 6px; }
+
+    /* Research-area group headers */
+    .area {
+      display: flex; align-items: center; gap: 10px;
+      margin: 30px 0 6px;
+    }
+    .area .bar { width: 5px; height: 22px; border-radius: 3px; background: var(--accent); }
+    .area h3 {
+      font-size: 17.5px; font-weight: 700; margin: 0;
+      letter-spacing: 0.3px;
+    }
+    .area .count { color: var(--light); font-size: 13.5px; font-weight: 400; }
 
     /* News */
     .news-table { border-collapse: collapse; width: 100%; }
@@ -62,10 +73,10 @@
     .news-date { width: 92px; color: var(--light); font-size: 14px; white-space: nowrap; }
 
     /* Publications */
-    .pub { display: flex; gap: 20px; padding: 14px 10px; border-radius: 8px; }
+    .pub { display: flex; gap: 20px; padding: 12px 10px; border-radius: 8px; }
     .pub.highlight { background: var(--highlight); }
     .pub-thumb {
-      width: 140px; height: 88px; flex-shrink: 0; border-radius: 6px;
+      width: 130px; height: 82px; flex-shrink: 0; border-radius: 6px;
       display: flex; align-items: center; justify-content: center;
       font-size: 12px; font-weight: 700; letter-spacing: 1px; color: #fff;
       text-align: center; padding: 4px;
@@ -77,7 +88,6 @@
     .pub-venue { font-size: 14.5px; font-style: italic; color: var(--muted); }
     .pub-venue .venue-strong { font-style: normal; font-weight: 700; color: var(--text); }
     .pub-links { font-size: 14px; margin-top: 2px; }
-    .eqc { color: var(--light); font-size: 13px; }
 
     /* Experience & teaching */
     .item { margin-bottom: 14px; }
@@ -122,110 +132,46 @@
       <div class="links">
         <a href="mailto:yerim1656@snu.ac.kr">Email</a><span class="sep">/</span>
         <a href="cv_yearim.pdf">CV</a><span class="sep">/</span>
-        <a href="https://scholar.google.com/citations?user=nS8vgAQAAAAJ&hl=en" target="_blank" rel="noopener">Google Scholar</a><span class="sep">/</span>
+        <a href="hhttps://scholar.google.com/citations?user=nS8vgAQAAAAJ&hl=en" target="_blank" rel="noopener">Google Scholar</a><span class="sep">/</span>
         <a href="https://github.com/yerrrringo98" target="_blank" rel="noopener">GitHub</a>
       </div>
     </div>
-    <!-- Put your photo at images/profile.jpg — the placeholder below will be replaced automatically -->
-    <img class="portrait" src="images/yearim.jpeg" alt="Yearim Kim"
-         onerror="this.outerHTML='<div class=&quot;portrait-fallback&quot;>YK</div>'">
+    <!-- Photo: put your picture in the images/ folder named profile.jpg
+         (profile.jpeg / profile.png / profile.webp also work) -->
+    <div id="portrait-slot"><div class="portrait-fallback">YK</div></div>
   </div>
 
   <!-- ===================== News ===================== -->
   <h2>News</h2>
   <table class="news-table">
-    <tr><td class="news-date">2026</td><td>Our unified interpretability framework was accepted to <b>TPAMI</b>!</td></tr>
-        <tr><td class="news-date">2026</td><td>PedaCo-Gen is accepted to <b>CHI EA 2026</b>.</td></tr>
-    <tr><td class="news-date">2026</td><td>Bi-ICE was accepted to <b>WACV 2026</b>.</td></tr>
+    <tr><td class="news-date">2026</td><td>Our iERF-centered unified interpretability framework was accepted to <b>TPAMI</b>!</td></tr>
+    <tr><td class="news-date">2026</td><td><b>Bi-ICE</b> was accepted to <b>WACV 2026</b>.</td></tr>
+    <tr><td class="news-date">2026</td><td><b>PedaCo-Gen</b> was accepted to <b>CHI 2026</b> (Extended Abstract, poster).</td></tr>
     <tr><td class="news-date">2025</td><td>Our work on causal interpretation of SAE features was presented at the <b>eXCV Workshop @ ICCV 2025</b>.</td></tr>
     <tr><td class="news-date">2024</td><td>Sharing Ratio Decomposition was accepted to <b>ICLR 2024</b>.</td></tr>
   </table>
 
   <!-- ===================== Publications ===================== -->
   <h2>Publications</h2>
-  <p class="section-note">* denotes equal contribution. Highlighted rows are representative works.</p>
+  <p class="section-note">Grouped by research area. * denotes equal contribution. Highlighted rows are representative works.</p>
 
-  <!-- P3 -->
-  <div class="pub">
-    <div class="pub-thumb" style="background:linear-gradient(135deg,#6d5ba7,#9b8cc4)">HIVE</div>
-    <div class="pub-body">
-      <span class="pub-title">HIVE: Hierarchical Induction of Visual Embeddings for Part–Whole Representation Learning</span>
-      <div class="pub-authors">Jinyung Hong*, <span class="me">Yearim Kim*</span>, Keun Hee Park, Pavan K. Turaga, Nojun Kwak, Andrew I Yang</div>
-      <div class="pub-venue">Under review</div>
-    </div>
+  <!-- ============ eXplainable AI ============ -->
+  <div class="area">
+    <div class="bar" style="background:#1772d0"></div>
+    <h3>eXplainable AI &amp; Interpretability</h3>
   </div>
 
-  <!-- P2 -->
-  <div class="pub">
-    <div class="pub-thumb" style="background:linear-gradient(135deg,#2e7d6b,#5fae9d)">ERF-SAE</div>
-    <div class="pub-body">
-      <span class="pub-title">Beyond Activation Patches: ERF-Grounded Autolabeling of Sparse Autoencoder Features in Vision Transformers</span>
-      <div class="pub-authors">Sangyu Han*, <span class="me">Yearim Kim*</span>, Nojun Kwak</div>
-      <div class="pub-venue">Under review</div>
-    </div>
-  </div>
-
-  <!-- J2 -->
+  <!-- SRD / ICLR 2024 -->
   <div class="pub highlight">
-    <div class="pub-thumb" style="background:linear-gradient(135deg,#b3541e,#e08a4e)">iERF</div>
+    <div class="pub-thumb" style="background:linear-gradient(135deg,#1e5aa8,#5e8fd0)">SRD</div>
     <div class="pub-body">
-      <span class="pub-title">From Local to Global to Mechanistic: An iERF-Centered Unified Framework for Interpreting Vision Models</span>
-      <div class="pub-authors"><span class="me">Yearim Kim*</span>, Sangyu Han*, Nojun Kwak</div>
-      <div class="pub-venue"><span class="venue-strong">IEEE TPAMI</span>, 2026 (to appear)</div>
+      <span class="pub-title">Respect the Model: Fine-grained and Robust Explanation with Sharing Ratio Decomposition</span>
+      <div class="pub-authors">Sangyu Han*, <span class="me">Yearim Kim*</span>, Nojun Kwak</div>
+      <div class="pub-venue"><span class="venue-strong">ICLR 2024</span></div>
     </div>
   </div>
 
-  <!-- C8 -->
-  <div class="pub">
-    <div class="pub-thumb" style="background:linear-gradient(135deg,#37648c,#6d9cc4)">VDPP</div>
-    <div class="pub-body">
-      <span class="pub-title">VDPP: Video Depth Post-Processing for Speed and Scalability</span>
-      <div class="pub-authors">Daewon Yoon, Injun Baek, Sangyu Han, <span class="me">Yearim Kim</span>, Nojun Kwak</div>
-      <div class="pub-venue">ECV Workshop @ <span class="venue-strong">CVPR 2026</span></div>
-    </div>
-  </div>
-
-  <!-- C7 -->
-  <div class="pub">
-    <div class="pub-thumb" style="background:linear-gradient(135deg,#8c3760,#c46d97)">CHI WS</div>
-    <div class="pub-body">
-      <span class="pub-title">When Saying No Makes Better Videos: Designing Dual Gatekeeping for Pedagogically Grounded AI Content Creation</span>
-      <div class="pub-authors"><span class="me">Yearim Kim*</span>, Injun Baek*, Nojun Kwak</div>
-      <div class="pub-venue">Workshop @ <span class="venue-strong">CHI 2026</span></div>
-    </div>
-  </div>
-
-  <!-- C6 -->
-  <div class="pub">
-    <div class="pub-thumb" style="background:linear-gradient(135deg,#a34a4a,#cf8080)">PedaCo-Gen</div>
-    <div class="pub-body">
-      <span class="pub-title">PedaCo-Gen: Scaffolding Pedagogical Agency in Human-AI Collaborative Video Authoring</span>
-      <div class="pub-authors">Injun Baek*, <span class="me">Yearim Kim*</span>, Nojun Kwak</div>
-      <div class="pub-venue"><span class="venue-strong">CHI EA 2026</span></div>
-    </div>
-  </div>
-
-  <!-- C5 -->
-  <div class="pub">
-    <div class="pub-thumb" style="background:linear-gradient(135deg,#3b7a57,#6fae8b)">Bi-ICE</div>
-    <div class="pub-body">
-      <span class="pub-title">Bi-ICE: An Inner Interpretable Framework for Image Classification via Bi-directional Interactions between Concept and Input Embeddings</span>
-      <div class="pub-authors">Jinyung Hong*, <span class="me">Yearim Kim*</span>, Keun Hee Park, Sangyu Han, Nojun Kwak, Theodore P. Pavlic</div>
-      <div class="pub-venue"><span class="venue-strong">WACV 2026</span></div>
-    </div>
-  </div>
-
-  <!-- C4 -->
-  <div class="pub">
-    <div class="pub-thumb" style="background:linear-gradient(135deg,#5d5d81,#9393b8)">SAE</div>
-    <div class="pub-body">
-      <span class="pub-title">Causal Interpretation of Sparse Autoencoder Features in Vision</span>
-      <div class="pub-authors">Sangyu Han, <span class="me">Yearim Kim</span>, Nojun Kwak</div>
-      <div class="pub-venue">eXCV Workshop @ <span class="venue-strong">ICCV 2025</span></div>
-    </div>
-  </div>
-
-  <!-- P1 -->
+  <!-- GIG / arXiv -->
   <div class="pub">
     <div class="pub-thumb" style="background:linear-gradient(135deg,#7a6a2f,#b0a05e)">GIG</div>
     <div class="pub-body">
@@ -236,27 +182,99 @@
     </div>
   </div>
 
-  <!-- C3 -->
+  <!-- iERF / TPAMI 2026 -->
   <div class="pub highlight">
-    <div class="pub-thumb" style="background:linear-gradient(135deg,#1e5aa8,#5e8fd0)">SRD</div>
+    <div class="pub-thumb" style="background:linear-gradient(135deg,#b3541e,#e08a4e)">iERF</div>
     <div class="pub-body">
-      <span class="pub-title">Respect the Model: Fine-grained and Robust Explanation with Sharing Ratio Decomposition</span>
-      <div class="pub-authors">Sangyu Han*, <span class="me">Yearim Kim*</span>, Nojun Kwak</div>
-      <div class="pub-venue"><span class="venue-strong">ICLR 2024</span></div>
+      <span class="pub-title">From Local to Global to Mechanistic: An iERF-Centered Unified Framework for Interpreting Vision Models</span>
+      <div class="pub-authors"><span class="me">Yearim Kim*</span>, Sangyu Han*, Nojun Kwak</div>
+      <div class="pub-venue"><span class="venue-strong">IEEE TPAMI</span>, 2026 (to appear)</div>
     </div>
   </div>
 
-  <!-- C2 -->
+  <!-- Bi-ICE / WACV 2026 -->
   <div class="pub">
-    <div class="pub-thumb" style="background:linear-gradient(135deg,#8a4f9e,#b98aca)">Meta</div>
+    <div class="pub-thumb" style="background:linear-gradient(135deg,#3b7a57,#6fae8b)">Bi-ICE</div>
     <div class="pub-body">
-      <span class="pub-title">Any-Way Meta Learning</span>
-      <div class="pub-authors">Junhoo Lee, <span class="me">Yearim Kim</span>, Nojun Kwak</div>
-      <div class="pub-venue"><span class="venue-strong">AAAI 2024</span></div>
+      <span class="pub-title">Bi-ICE: An Inner Interpretable Framework for Image Classification via Bi-directional Interactions between Concept and Input Embeddings</span>
+      <div class="pub-authors">Jinyung Hong*, <span class="me">Yearim Kim*</span>, Keun Hee Park, Sangyu Han, Nojun Kwak, Theodore P. Pavlic</div>
+      <div class="pub-venue"><span class="venue-strong">WACV 2026</span></div>
     </div>
   </div>
 
-  <!-- C1 -->
+  <!-- HIVE / under review -->
+  <div class="pub">
+    <div class="pub-thumb" style="background:linear-gradient(135deg,#6d5ba7,#9b8cc4)">HIVE</div>
+    <div class="pub-body">
+      <span class="pub-title">HIVE: Hierarchical Induction of Visual Embeddings for Part–Whole Representation Learning</span>
+      <div class="pub-authors">Jinyung Hong*, <span class="me">Yearim Kim*</span>, Keun Hee Park, Pavan K. Turaga, Nojun Kwak, Andrew I Yang</div>
+      <div class="pub-venue">Under review</div>
+    </div>
+  </div>
+
+  <!-- SAE causal / ICCV 2025 WS -->
+  <div class="pub">
+    <div class="pub-thumb" style="background:linear-gradient(135deg,#5d5d81,#9393b8)">SAE</div>
+    <div class="pub-body">
+      <span class="pub-title">Causal Interpretation of Sparse Autoencoder Features in Vision</span>
+      <div class="pub-authors">Sangyu Han, <span class="me">Yearim Kim</span>, Nojun Kwak</div>
+      <div class="pub-venue">eXCV Workshop @ <span class="venue-strong">ICCV 2025</span></div>
+    </div>
+  </div>
+
+  <!-- ERF-SAE / under review -->
+  <div class="pub">
+    <div class="pub-thumb" style="background:linear-gradient(135deg,#2e7d6b,#5fae9d)">ERF-SAE</div>
+    <div class="pub-body">
+      <span class="pub-title">Beyond Activation Patches: ERF-Grounded Autolabeling of Sparse Autoencoder Features in Vision Transformers</span>
+      <div class="pub-authors">Sangyu Han*, <span class="me">Yearim Kim*</span>, Nojun Kwak</div>
+      <div class="pub-venue">Under review</div>
+    </div>
+  </div>
+
+  <!-- ============ Human-AI Collaboration ============ -->
+  <div class="area">
+    <div class="bar" style="background:#8c3760"></div>
+    <h3>Human–AI Collaboration &amp; AI for Education</h3>
+  </div>
+
+  <!-- PedaCo-Gen / CHI EA 2026 -->
+  <div class="pub">
+    <div class="pub-thumb" style="background:linear-gradient(135deg,#a34a4a,#cf8080)">PedaCo-Gen</div>
+    <div class="pub-body">
+      <span class="pub-title">PedaCo-Gen: Scaffolding Pedagogical Agency in Human-AI Collaborative Video Authoring</span>
+      <div class="pub-authors">Injun Baek*, <span class="me">Yearim Kim*</span>, Nojun Kwak</div>
+      <div class="pub-venue"><span class="venue-strong">CHI EA 2026</span> (poster)</div>
+    </div>
+  </div>
+
+  <!-- Dual gatekeeping / CHI 2026 WS -->
+  <div class="pub">
+    <div class="pub-thumb" style="background:linear-gradient(135deg,#8c3760,#c46d97)">CHI WS</div>
+    <div class="pub-body">
+      <span class="pub-title">When Saying No Makes Better Videos: Designing Dual Gatekeeping for Pedagogically Grounded AI Content Creation</span>
+      <div class="pub-authors"><span class="me">Yearim Kim*</span>, Injun Baek*, Nojun Kwak</div>
+      <div class="pub-venue">Workshop @ <span class="venue-strong">CHI 2026</span></div>
+    </div>
+  </div>
+
+  <!-- ============ 3D Vision & Video ============ -->
+  <div class="area">
+    <div class="bar" style="background:#37648c"></div>
+    <h3>3D Vision &amp; Video Understanding</h3>
+  </div>
+
+  <!-- VDPP / CVPR 2026 WS -->
+  <div class="pub">
+    <div class="pub-thumb" style="background:linear-gradient(135deg,#37648c,#6d9cc4)">VDPP</div>
+    <div class="pub-body">
+      <span class="pub-title">VDPP: Video Depth Post-Processing for Speed and Scalability</span>
+      <div class="pub-authors">Daewon Yoon, Injun Baek, Sangyu Han, <span class="me">Yearim Kim</span>, Nojun Kwak</div>
+      <div class="pub-venue">ECV Workshop @ <span class="venue-strong">CVPR 2026</span></div>
+    </div>
+  </div>
+
+  <!-- TensoRF relighting / WACV 2024 -->
   <div class="pub">
     <div class="pub-thumb" style="background:linear-gradient(135deg,#c47d2a,#e0ac67)">TensoRF</div>
     <div class="pub-body">
@@ -266,13 +284,29 @@
     </div>
   </div>
 
-  <!-- J1 -->
+  <!-- MD3D / IEEE Access 2022 -->
   <div class="pub">
     <div class="pub-thumb" style="background:linear-gradient(135deg,#4a6b8a,#7e9cb8)">MD3D</div>
     <div class="pub-body">
       <span class="pub-title">MD3D: Mixture-Density-based 3D Object Detection in Point Clouds</span>
       <div class="pub-authors">Jaeseok Choi, Yeji Song, <span class="me">Yearim Kim</span></div>
       <div class="pub-venue"><span class="venue-strong">IEEE Access</span>, 2022</div>
+    </div>
+  </div>
+
+  <!-- ============ Machine Learning ============ -->
+  <div class="area">
+    <div class="bar" style="background:#8a4f9e"></div>
+    <h3>Machine Learning</h3>
+  </div>
+
+  <!-- Any-Way / AAAI 2024 -->
+  <div class="pub">
+    <div class="pub-thumb" style="background:linear-gradient(135deg,#8a4f9e,#b98aca)">Meta</div>
+    <div class="pub-body">
+      <span class="pub-title">Any-Way Meta Learning</span>
+      <div class="pub-authors">Junhoo Lee, <span class="me">Yearim Kim</span>, Nojun Kwak</div>
+      <div class="pub-venue"><span class="venue-strong">AAAI 2024</span></div>
     </div>
   </div>
 
@@ -309,5 +343,29 @@
     Website design inspired by <a href="https://jonbarron.info" target="_blank" rel="noopener">Jon Barron</a>. Last updated July 2026.
   </footer>
 </div>
+
+<script>
+  // Try several common photo filenames; keep the "YK" placeholder if none exists.
+  (function () {
+    var candidates = [
+      "images/profile.jpg", "images/profile.jpeg", "images/profile.png",
+      "images/profile.webp", "images/profile.JPG", "images/profile.PNG"
+    ];
+    var slot = document.getElementById("portrait-slot");
+    function tryNext(i) {
+      if (i >= candidates.length) return; // keep placeholder
+      var img = new Image();
+      img.onload = function () {
+        img.className = "portrait";
+        img.alt = "Yearim Kim";
+        slot.innerHTML = "";
+        slot.appendChild(img);
+      };
+      img.onerror = function () { tryNext(i + 1); };
+      img.src = candidates[i];
+    }
+    tryNext(0);
+  })();
+</script>
 </body>
 </html>
