@@ -194,7 +194,9 @@
       I work on <b>eXplainable AI (XAI)</b> for vision models. My goal is to understand what
       vision models learn and how they make decisions — spanning fine-grained attribution methods,
       concept-level and mechanistic interpretability, and unified frameworks that connect local,
-      global, and mechanistic views of a model. I believe that opening up the inner workings of
+      global, and mechanistic views of a model. More recently, I have been extending this to
+      vision–language and language models — studying why models fail to use knowledge they already have,
+      and whether a model's stated reasoning matches what it actually does. I believe that opening up the inner workings of
       models is a prerequisite for safe, transparent, and trustworthy AI.
     </p>
   </div>
@@ -202,6 +204,7 @@
   <!-- ===================== News ===================== -->
   <h2>News</h2>
   <table class="news-table">
+    <tr><td class="news-date">2026</td><td>Our work on recognition–recall dissociation in vision–language models was accepted to the <b>LVR Workshop @ WACV 2027</b>!</td></tr>
     <tr><td class="news-date">2026</td><td>Our iERF-centered unified interpretability framework was accepted to <b>TPAMI</b>!</td></tr>
     <tr><td class="news-date">2026</td><td><b>Bi-ICE</b> was accepted to <b>WACV 2026</b>.</td></tr>
     <tr><td class="news-date">2026</td><td><b>PedaCo-Gen</b> was accepted to <b>CHI 2026</b> (Extended Abstract, poster).</td></tr>
@@ -228,6 +231,17 @@
       <div class="pub-authors"><span class="me">Yearim Kim*</span>, <a href="https://scholar.google.com/citations?user=Xe9KzXgAAAAJ" target="_blank" rel="noopener">Sangyu Han*</a>, <a href="https://scholar.google.com/citations?user=h_8-1M0AAAAJ" target="_blank" rel="noopener">Nojun Kwak</a></div>
       <div class="pub-venue"><span class="venue-strong">IEEE TPAMI</span>, 2026 (to appear)</div>
       <div class="pub-desc">A unified framework centered on implicit effective receptive fields (iERF) that connects local attribution, global concept analysis, and mechanistic circuit-level interpretation of vision models.</div>
+    </div>
+  </div>
+
+  <!-- LVR / WACV 2027 workshop -->
+  <div class="pub">
+    <div class="pub-thumb" data-img="images/lvr-factual-access.png" style="background:linear-gradient(135deg,#8a3b6b,#c46f9f)">LVR</div>
+    <div class="pub-body">
+      <span class="pub-title">Separately Capable, Jointly Failing: Recognition Without Functional Factual Access in Vision–Language Models</span>
+      <div class="pub-authors"><span class="me">Yearim Kim</span>, <a href="https://scholar.google.com/citations?user=JaQMvXsAAAAJ" target="_blank" rel="noopener">Jinyung Hong</a>, <a href="https://scholar.google.com/citations?user=h_8-1M0AAAAJ" target="_blank" rel="noopener">Nojun Kwak</a></div>
+      <div class="pub-venue">LVR Workshop @ <span class="venue-strong">WACV 2027</span></div>
+      <div class="pub-desc">VLMs can recognize an entity in an image and their language backbone can recall a fact about it, yet they often fail to combine the two. A double-gated design isolates this dissociation, and causal interventions show that re-entering the identity as text repairs far more failures than restoring internal activations.</div>
     </div>
   </div>
 
